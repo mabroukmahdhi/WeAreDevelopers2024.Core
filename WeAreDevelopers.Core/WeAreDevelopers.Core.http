@@ -1,0 +1,6 @@
+@WeAreDevelopers.Core_HostAddress = http://localhost:5126
+
+GET {{WeAreDevelopers.Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
