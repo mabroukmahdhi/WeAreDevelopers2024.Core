@@ -13,6 +13,7 @@ using WeAreDevelopers.Core.Brokers.DateTimes;
 using WeAreDevelopers.Core.Brokers.Loggings;
 using WeAreDevelopers.Core.Brokers.OpenAis;
 using WeAreDevelopers.Core.Brokers.Storages;
+using WeAreDevelopers.Core.Hubs;
 using WeAreDevelopers.Core.Services.Foundations.Attendees;
 using WeAreDevelopers.Core.Services.Foundations.OpenAis;
 
@@ -23,6 +24,8 @@ namespace WeAreDevelopers.Core
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddSignalR();
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
@@ -53,6 +56,7 @@ namespace WeAreDevelopers.Core
                 app.UseSwaggerUI();
             }
 
+            app.MapHub<AttendeesHub>("/attendeesHub");
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
