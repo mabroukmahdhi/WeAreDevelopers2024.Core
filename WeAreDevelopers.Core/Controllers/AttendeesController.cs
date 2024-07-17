@@ -16,12 +16,9 @@ namespace WeAreDevelopers.Core.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AttendeesController : RESTFulController
+    public class AttendeesController(IAttendeeService AttendeeService) : RESTFulController
     {
-        private readonly IAttendeeService AttendeeService;
-
-        public AttendeesController(IAttendeeService AttendeeService) =>
-            this.AttendeeService = AttendeeService;
+        private readonly IAttendeeService AttendeeService = AttendeeService;
 
         [HttpPost]
         public async ValueTask<ActionResult<Attendee>> PostAttendeeAsync(Attendee Attendee)

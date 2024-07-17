@@ -9,9 +9,9 @@ using Standard.AI.OpenAI.Models.Services.Foundations.ChatCompletions;
 
 namespace WeAreDevelopers.Core.Brokers.OpenAis
 {
-    public class OpenAiBroker : IOpenAiBroker
+    public class OpenAiBroker(IOpenAIClient openAIClient) : IOpenAiBroker
     {
-        private readonly IOpenAIClient openAIClient;
+        private readonly IOpenAIClient openAIClient = openAIClient;
 
         public async ValueTask<string> PostOpenAiPromptAsync(string prompt)
         {
