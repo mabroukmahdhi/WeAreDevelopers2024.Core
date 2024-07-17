@@ -1,3 +1,8 @@
+// ---------------------------------------------------------------
+// Copyright (c) Mabrouk Mahdhi. 
+//  W/ love for WeAreDevelopers World Congress 2024.
+// ---------------------------------------------------------------
+
 using System;
 using System.Threading.Tasks;
 using EFxceptions.Models.Exceptions;
@@ -7,7 +12,6 @@ using Microsoft.EntityFrameworkCore;
 using Moq;
 using WeAreDevelopers.Core.Models.Attendees;
 using WeAreDevelopers.Core.Models.Attendees.Exceptions;
-using Xunit;
 
 namespace WeAreDevelopers.Core.Tests.Unit.Services.Foundations.Attendees
 {

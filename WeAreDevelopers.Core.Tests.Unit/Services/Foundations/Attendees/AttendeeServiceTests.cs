@@ -1,17 +1,21 @@
+// ---------------------------------------------------------------
+// Copyright (c) Mabrouk Mahdhi. 
+//  W/ love for WeAreDevelopers World Congress 2024.
+// ---------------------------------------------------------------
+
 using System;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.Serialization;
 using Microsoft.Data.SqlClient;
 using Moq;
+using Tynamix.ObjectFiller;
 using WeAreDevelopers.Core.Brokers.DateTimes;
 using WeAreDevelopers.Core.Brokers.Loggings;
 using WeAreDevelopers.Core.Brokers.Storages;
 using WeAreDevelopers.Core.Models.Attendees;
 using WeAreDevelopers.Core.Services.Foundations.Attendees;
-using Tynamix.ObjectFiller;
 using Xeptions;
-using Xunit;
-using System.Linq;
 
 namespace WeAreDevelopers.Core.Tests.Unit.Services.Foundations.Attendees
 {
@@ -34,7 +38,7 @@ namespace WeAreDevelopers.Core.Tests.Unit.Services.Foundations.Attendees
                 loggingBroker: this.loggingBrokerMock.Object);
         }
 
-         private static IQueryable<Attendee> CreateRandomAttendees()
+        private static IQueryable<Attendee> CreateRandomAttendees()
         {
             return CreateAttendeeFiller(GetRandomDateTimeOffset())
                 .Create(count: GetRandomNumber())

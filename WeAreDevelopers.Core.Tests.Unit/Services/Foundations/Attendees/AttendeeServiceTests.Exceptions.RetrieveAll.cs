@@ -1,9 +1,13 @@
+// ---------------------------------------------------------------
+// Copyright (c) Mabrouk Mahdhi. 
+//  W/ love for WeAreDevelopers World Congress 2024.
+// ---------------------------------------------------------------
+
 using System;
 using FluentAssertions;
 using Microsoft.Data.SqlClient;
 using Moq;
 using WeAreDevelopers.Core.Models.Attendees.Exceptions;
-using Xunit;
 
 namespace WeAreDevelopers.Core.Tests.Unit.Services.Foundations.Attendees
 {

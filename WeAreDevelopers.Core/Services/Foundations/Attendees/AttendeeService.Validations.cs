@@ -1,3 +1,8 @@
+// ---------------------------------------------------------------
+// Copyright (c) Mabrouk Mahdhi. 
+//  W/ love for WeAreDevelopers World Congress 2024.
+// ---------------------------------------------------------------
+
 using System;
 using WeAreDevelopers.Core.Models.Attendees;
 using WeAreDevelopers.Core.Models.Attendees.Exceptions;

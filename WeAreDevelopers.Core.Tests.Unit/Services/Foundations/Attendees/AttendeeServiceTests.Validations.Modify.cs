@@ -1,3 +1,8 @@
+// ---------------------------------------------------------------
+// Copyright (c) Mabrouk Mahdhi. 
+//  W/ love for WeAreDevelopers World Congress 2024.
+// ---------------------------------------------------------------
+
 using System;
 using System.Threading.Tasks;
 using FluentAssertions;
@@ -5,7 +10,6 @@ using Force.DeepCloner;
 using Moq;
 using WeAreDevelopers.Core.Models.Attendees;
 using WeAreDevelopers.Core.Models.Attendees.Exceptions;
-using Xunit;
 
 namespace WeAreDevelopers.Core.Tests.Unit.Services.Foundations.Attendees
 {
